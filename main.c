@@ -41,4 +41,12 @@ int main() {
 
     int n = sizeof(arr) / sizeof(arr[0]);
 
-    
+    quicksort(arr, 0, n - 1, &trocas, &comparacoes);
+
+    printf("Numero de trocas: %d\n", trocas);
+    printf("Numero de comparacoes: %d\n", comparacoes);
+
+    printf("Vetor ordenado:\n");
+    for (int i = 0; i < n; i++) {
+        printf("(%d) %s\n", i + 1, arr[i]);
+    }

@@ -23,3 +23,11 @@ int partition(char **arr, int low, int high, int *trocas, int *comparacoes) {
     swap(&arr[i + 1], &arr[high]);
     return (i + 1);
 }
+
+void quicksort(char **arr, int low, int high, int *trocas, int *comparacoes) {
+    if (low < high) {
+        int pi = partition(arr, low, high, trocas, comparacoes);
+        quicksort(arr, low, pi - 1, trocas, comparacoes);
+        quicksort(arr, pi + 1, high, trocas, comparacoes);
+    }
+}

@@ -31,3 +31,14 @@ void quicksort(char **arr, int low, int high, int *trocas, int *comparacoes) {
         quicksort(arr, pi + 1, high, trocas, comparacoes);
     }
 }
+
+int main() {
+    char *arr[20] = {
+        "maca", "banana", "pera", "uva", "laranja", "abacaxi", "limao", "manga", "abacate", "kiwi",
+        "cereja", "morango", "pessego", "goiaba", "melancia", "framboesa", "amora", "caqui", "figo", "papaya"
+    };
+    int trocas = 0, comparacoes = 0;
+
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    

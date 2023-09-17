@@ -50,3 +50,11 @@ int main() {
     for (int i = 0; i < n; i++) {
         printf("(%d) %s\n", i + 1, arr[i]);
     }
+
+    char *mediana;
+    if (n % 2 == 0) {
+        mediana = arr[n / 2 - 1];
+    } else {
+        mediana = arr[n / 2];
+    }
+    printf("Mediana: %s\n", mediana);

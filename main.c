@@ -58,3 +58,20 @@ int main() {
         mediana = arr[n / 2];
     }
     printf("Mediana: %s\n", mediana);
+
+    FILE *saida = fopen("saida.txt", "w");
+    if (saida == NULL) {
+        printf("Erro ao criar o arquivo de saída.");
+        return 1;
+    }
+    fprintf(saida, "Número de trocas: %d\n", trocas);
+    fprintf(saida, "Número de comparações: %d\n", comparacoes);
+    fprintf(saida, "Vetor ordenado:\n");
+    for (int i = 0; i < n; i++) {
+        fprintf(saida, "(%d) %s\n", i + 1, arr[i]);
+    }
+    fprintf(saida, "Mediana: %s\n", mediana);
+    fclose(saida);
+
+    return 0;
+}
